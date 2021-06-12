@@ -1,0 +1,169 @@
+body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-image: url('./images/bg-intro-mobile.png');
+    background-blend-mode: multiply;
+}
+.main {
+    margin: 25% 5vw;
+}
+.top {
+    color: white;
+    margin-bottom: 20%;
+}
+h1 {
+    font-weight: 700;
+    line-height: 1.1;
+}
+button {
+    margin: none;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(248, 32%, 49%);
+    width: 100%;
+    color: white;
+    padding: 1% 20%;
+    line-height: 1.5;
+    font-size: 17px;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+}
+form {
+    margin-top: 10%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    font-weight: 400;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+}
+.inputField {
+    display: flex;
+    flex-direction: column;
+}
+.errorMessage {
+    text-align: right;
+    color: red;
+}
+#fName:valid~.noFName {
+    display: none;
+}
+#lName:valid~.noLName {
+    display: none;
+}
+#email:valid~.noEmail {
+    display: none;
+}
+#email:valid {
+    color: red;
+}
+#password:valid~.noPassword {
+    display: none;
+}
+input {
+    border: 0.5px solid hsl(246, 25%, 77%);
+    border-radius: 4px;
+    color: hsl(249, 10%, 26%);
+    font-size: 1rem;
+    margin: 0.7rem;
+    min-width: 125px;
+    padding: 0.8rem;
+    transition: border-color 0.5s ease-out;
+}
+input:valid {
+    border: 1px solid black;
+}
+input:focus {
+    outline: none !important;
+    border: 1px solid black;
+}
+input:invalid {
+    border: 1px solid red;
+    background: url("./images/icon-error.svg") no-repeat 95% 50%;
+    background-size: 1rem;
+}
+span {
+    font-size: 12px;
+}
+#submitButton {
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    margin: 0.5rem;
+    margin-top: 1rem;
+    min-width: 125px;
+    width: 95%;
+    padding: 5%;
+    font-weight: 600;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.footer {
+    color: hsl(246, 25%, 77%);
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+.terms {
+    color: red;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-image: url('./images/bg-intro-desktop.png');
+    }
+    .main {
+        margin: 10% 11%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "top mid";
+    }
+    .top {
+        grid-area: top;
+        align-self: center;
+        margin-right: 5%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: justify;
+        align-items: space-between;
+    }
+    h1 {
+        font-size: 49px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+    .mid {
+        grid-area: mid;
+        margin-top: -5%;
+        margin-left: 3.8%;
+        margin-right: -2%;
+    }
+
+    button {
+        padding: 0.5% 20%;
+    }
+    form {
+        margin-top: 4%;
+        background-color: white;
+        border-radius: 10px;
+        padding: 6%;
+        font-weight: 400;
+    }
+    input {
+        border-radius: 6px;
+        font-size: 1rem;
+        margin: 0.8rem;
+        margin-bottom: 0.5rem;
+        padding: 1.1rem;
+    }
+    #submitButton {
+        margin-top: 0.8rem;
+        padding: 4%;
+    }
+}

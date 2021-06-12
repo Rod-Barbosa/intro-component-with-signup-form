@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="mystyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Intro component with sign up form</title>
+
+
+</head>
+
+<body>
+<div class="main">
+  <div class="top">
+    <h1>
+      Learn to code by watching others
+    </h1>
+    <p>
+      See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+      but understanding how developers think is invaluable.
+    </p>
+  </div>
+  <div class="mid">
+
+    <button lass="freeTrial">
+      <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+    </button>
+
+    <form>
+
+      <div class="inputField">
+        <input type="text" placeholder="First Name" required pattern=".*\S.*" id="fName">
+        <span class="errorMessage noFName">First Name cannot be empty</span>
+      </div>
+
+      <div class="inputField">
+        <input type="text" placeholder="Last Name" required pattern=".*\S.*" id="lName">
+        <span class="errorMessage noLName">Last Name cannot be empty</span>
+      </div>
+
+      <div class="inputField">
+        <input type="email" placeholder="Email Address" required
+          pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email">
+        <span class="errorMessage noEmail">Looks like this is not an email</span>
+      </div>
+
+      <div class="inputField">
+        <input type="password" placeholder="Password" required pattern=".*\S.*" id="password">
+        <span class="errorMessage noPassword">Password cannot be empty</span>
+      </div>
+
+      <input type="submit" value="CLAIM YOUR FREE TRIAL" id="submitButton">
+      <p class="footer">
+        By clicking the button, you are agreeing to our <b class="terms">Terms and Services</b>
+      </p>
+    </form>
+
+
+
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
